@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <link rel="icon" href="static/images/logo.png">
+  </head>
+  
+<body background="static/images/back1.jpg">
+<div class="outer">
+<div class="main-log-in">
+  <div class="intro">
+    <img src="static/images/logo.png" alt="" class="logo">
+    <h1>Welcome to Arcane Chatbot</h1>
+    <p class="sub">
+        Experience a smart, interactive chatbot that responds to your queries in real time. 
+        With voice input and output capabilities, our AI assistant makes your interactions more intuitive.
+    </p>
+    <p class="features">
+        Features:
+    </p>
+    <ul>
+        <li>Real-time responses with accurate information.</li>
+        <li>Interactive voice input and output support.</li>
+        <li>Track your previous conversations effortlessly.</li>
+    </ul>
+  </div>
+  <button id="loginButton" class="link-button" onclick="dispLog()"><a href="#login">login to continue...</a></button>
+  <div class="log">
+  <div class="log-in" id="log-in">
+    <form  action="/login" method="post" autocomplete="off" id="login">
+      <h2>Login</h2>
+      <div class="imgcontainer">
+        <object data="/static/images/avatar.jpg" type="image/png" class="avatar">
+          <img src="{{ url_for('static', filename='images/avatar.jpg') }} " alt="Example Image" class="avatar">
+        </object>
+      </div>
+      <div class="container">
+        <label for="uname">email</label>
+        <input autocomplete="off" type="text" placeholder="Enter Username or Email" name="username" required="@gmail.com">
+        <div class="pass">
+          <label for="psw">Password</label>
+          <input autocomplete="off" type="password" placeholder="Enter Password" name="password" required id="myInput">
+          <input type="checkbox" onclick="showPass()" id="pas">
+        </div>
+        <button type="submit">Login</button>
+        <a class="register" href="#register" onclick="dispReg()">Register</a>
+      </div>  
+    </form>
+
+    <form style="display:none;" id="register" style="display: block;" action="/register" method="post">
+      <h2>Register</h2>
+      <div class="imgcontainer">
+        <object data="static/images/avatar.png" type="image/jpg" class="avatar">
+          <img src="{{ url_for('static', filename='images/avatar.jpg') }} " alt="Example Image" class="avatar">
+        </object>
+      </div>
+      <div class="container">
+        <label for="uname">username</label>
+        <input type="text" placeholder="New Username" name="username" required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" name="email" id="email" required="@gmail.com">
+        <div class="pass">
+          <label for="psw">Password</label>
+          <input autocomplete="off" type="password" placeholder="Enter Password" name="password" required id="myInput2">
+          <input type="checkbox" onclick="showPass()" id="pass">
+        </div>
+        <button type="submit">Register</button>
+        <a class="login" href="#login" onclick="dispLog()">login&quest;</a>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+
+</div>
+
+</div>  
+
+</div>
+</body> 
+</html>

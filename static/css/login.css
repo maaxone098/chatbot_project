@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Nova+Script&family=Yesteryear&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bagnard');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Quicksand:wght@300..700&family=Timmana&display=swap');@font-face {
+    font-family: 'bro';
+    src: url(/static/fonts/brogte/Brogte.otf);
+}
+@font-face {
+    font-family: 'typog';
+    src: url(/static/fonts/typographica-font/Typographica-Blp5.ttf);
+}
+@font-face {
+    font-family: 'scrap';
+    src: url(/static/fonts/handwriting_black_draft/handwriting-black-draft_DEMO.otf);
+}
+@font-face {
+    font-family: cor;
+    src: url(/static/fonts/brogte/corleone/Corleone-Due-Regular.otf);
+}
+
+html {
+    
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+
+body{
+   
+   color: #f0ebd8;
+   font-family: cor;
+   
+   background-image: url(/static/images/back1.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0px;
+    height: 80%;
+}
+
+.logo{
+    width: 120px;
+    left: 0;
+    top: 0;
+}
+
+.outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    height: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.log-in{
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    color: white;
+    font-family: typog;
+    letter-spacing: 2px;
+    transition: all 1s;
+    animation-name: moving;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.intro{
+    width: auto;
+    height: auto;
+    height: inherit;
+}
+
+
+h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'timmana';
+    letter-spacing: 0px;
+    word-spacing: 0rem;
+    color: white;
+    margin-top: 0;
+}
+li{
+    list-style: none;
+    align-items: start;
+    letter-spacing: 1px;
+    line-height: 2;
+    color: white;
+    font-family: 'quicksand';
+    
+}
+
+.sub{
+    font-family: 'quicksand';
+    letter-spacing: 1px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    /* text-indent: 50px; */
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+p.features{
+    text-indent: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: 'quicksand';
+}
+
+h2{
+    text-transform: capitalize;
+    font-size: 30px;
+    position: static;
+    background-color: #0d132100;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+form{
+    
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid gray;
+}
+
+.imgcontainer{
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 12px 0;
+
+}
+
+.avatar{
+    width: 40%;
+    border-radius: 50%;
+    
+}
+
+
+.container{
+    padding: 25px;
+    /* position: relative; */
+    height: fit-content;
+}
+
+
+label{
+    margin-bottom: 20px;
+    /* padding: 0 4px 0 6px; */
+    /* position: static; */
+    background-color:#0d132100;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    z-index: 2;
+   
+}
+
+input[type=text],input[type=password],input[type=email]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 0 ;
+    margin: 12px 0 20px 0;
+    outline: none;
+    padding: 15px;
+    background-color: #00000063;
+    /* position: static; */
+    border: none;
+    font-size: large;
+    color: #f0ebd8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.pass{
+    display: block;
+    /* position: relative; */
+}
+
+#pas{
+    position: absolute;
+    margin: 32px -30px;
+}
+
+#pass{
+    position: absolute;
+    margin: 32px -30px;
+}
+
+button{
+    width: 100%;
+    border: 2px solid white;
+    background-color: black;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
+    letter-spacing: 2px;
+    transition: 0.4s ease-in-out;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+button:hover{
+    background-color: #8B5DFF;
+}
+
+input:focus{
+    color:#f0ebd8 ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #00000056;
+    border-bottom: 2px solid #f0ebd8;
+}
+
+input::placeholder{
+    font-size: medium;
+}
+
+.intro{
+    width: 60%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    .log-in{
+        /* backdrop-filter: blur(0px); */
+        position: static;
+        bottom: 0;
+        align-content: center;
+        background-color: rgba(83, 119, 151, 0);
+        border-radius: 25px;
+        /* width: 100%; */
+        width: 60%;
+    }
+
+    .outer{
+        height: 100%;
+    }
+
+    input::placeholder{
+        font-size: small;
+    }
+
+    .intro{
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+a.register{
+    font-size:small;
+    cursor: pointer;
+    color: rgba(148, 147, 147, 0.685);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: typog;
+    
+    
+    
+}
+a.register:hover{
+    color: rgb(192, 190, 190);
+    transition: 0.2s ease-in-out;
+}
+
+a.login{
+    font-size:small;
+    cursor: pointer;
+    color: rgba(148, 147, 147, 0.685);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: typog;
+    
+    
+    
+}
+a.login:hover{
+    color: rgb(192, 190, 190);
+    transition: 0.2s ease-in-out;
+}
+
+.log{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: typog;
+    text-transform: capitalize;
+    
+}
+
+.link-button {
+    width: fit-content;
+    background-color: black;
+    color: white;
+}
+
+.link-button:hover{
+    background-color: #8B5DFF;
+    transition: 0.2s all;
+    transform: scale(0.95);
+}

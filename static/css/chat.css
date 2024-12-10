@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Nova+Script&family=Yesteryear&display=swap');
+@import url('https://fonts.cdnfonts.com/css/bagnard');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Pompiere&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    color: #f0ebd8;
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+    background-image: url(/static/images/back1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 0;
+    height: 100%;
+}
+
+
+.history {
+    width: 30%;
+    display: none;
+    background-color: rgba(65, 63, 63, 0.4);
+    border-radius: 25px;
+    margin-right: 20px;
+    padding: 20px;
+    position: static;
+    top: 60px;
+    left: 20px;
+    z-index: 10;
+}
+
+#menuButton {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #f0ebd8;
+}
+
+#cancel {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #f0ebd8;
+}
+
+.chat-container {
+    display: flex;
+    height: 98vh;
+    box-sizing: border-box;
+    position: relative;
+    padding: 50px;
+}
+
+.chat-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: rgba(65, 63, 63, 0.4);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-family: "lato";
+    font-weight: 800;
+    text-transform: capitalize;
+    color: white;
+    height: 98vh;
+}
+
+.content > p{
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+}
+
+#messages p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-family: "lato";
+    font-weight: 500;
+}
+
+#messages p.me {
+    background-color: #5c5c5c;
+    color: #ffffff;
+    text-align: right;
+    margin-left: auto;
+}
+
+#messages p.bot {
+    background-color: #8b5dff;
+    color: #000;
+    text-align: left;
+    margin-right: auto;
+}
+
+
+.input-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 15px;
+    background-color: rgba(65, 63, 63, 0.4);
+    border-radius: 25px;
+    border: none;
+    font-size: small;
+    color: #f0ebd8;
+    text-indent: 10px;
+}
+
+input::placeholder {
+    font-size: small;
+    color: #aaa;
+}
+
+button {
+    width: 58px;
+    margin-left: 8px;
+    border: none;
+    background-color: #8b5dff;
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a982ff;
+}
+
+i {
+    color: white;
+}

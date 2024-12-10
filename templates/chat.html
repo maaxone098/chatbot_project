@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script defer src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <i class="fa-solid fa-bars" id="menuButton" aria-label="Toggle History Menu" role="button"></i>
+        <i class="fa-solid fa-xmark" id="cancel" aria-label="Close History Menu"></i>
+        <aside id="history" class="history" aria-hidden="true">
+            <h3>History</h3>
+            <ul id="history-list">
+                {% for entry in history %}
+                    <li>{{ entry['user'] if entry.get('user') else entry['bot'] }}</li>
+                {% endfor %}
+            </ul>
+        </aside>
+        <main class="chat-box">
+            <section id="messages" class="chat-container-msg" aria-live="polite">
+                <div class="content">
+                    <p>hello how you doing&nbsp;?</p>
+                    <p>i'm arcane, how can i help you</p>
+                </div>
+            </section>
+            <footer class="input-box">
+                <input 
+                    type="text" 
+                    id="text-input" 
+                    placeholder="Type your message..." 
+                    aria-label="Type your message">
+                
+                <button id="voice-input-btn" aria-label="Voice Input">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                
+                <button id="send-btn" aria-label="Send Message" >
+                    <img src="/static/images/logo.png" alt="Send" width="30px" height="30px">
+                </button>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
